@@ -1,24 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import myimage from "./imageInSrc.jpeg"
+
+  
 
 function App() {
+  const element = <h1 class="title red">Your name here</h1>;
+  const image_src = <img src={myimage} />;
+  const image_public = <img src="/imageInPublic.jpeg" />;
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    
+    <div>
+      {element}
+      <br/>
+      {image_src}
+      <br/>
+      {image_public}
+      <br/>
+     <video width="320" height="240" controls>
+     <source src="myVideo.mp4" type="video/mp4" />
+     </video>
     </div>
+    
   );
 }
 
